@@ -3,18 +3,10 @@ pipeline {
 	stages {
 		stage("Cleaning Stage") {
 			steps {
-				sh "mvn clean"
+				sh 'mvn clean install'
 			}
 		}
-		stage("Teating Stage") {
-			steps {
-				sh "mvn test"
-			}
-		}
-		stage("Packaging Stage"){
-			steps {
-				sh "mvn package"
-			}
-		}
+		
+		
 	}
 }
